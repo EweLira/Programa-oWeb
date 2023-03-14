@@ -1,14 +1,19 @@
-let usuario, senha;
+const form = document.querySelector('form');
+const usuarioInput = document.querySelector('#usuario');
+const senhaInput = document.querySelector('#senha');
 
-do {
-  usuario = prompt("Digite o nome de usuário:");
-  senha = prompt("Digite a senha:");
 
-  if (usuario !== null && senha !== null) {
-    if (usuario === senha) {
-      alert("Senha não pode ser igual ao nome");
-    } else {
-      alert("Login realizado!");
-    }
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const usuario = usuarioInput.value.trim();
+  const senha = senhaInput.value.trim();
+
+  if (senha === usuario) {
+    alert("Senha não pode ser igual ao nome");
+  } else {
+    alert("Login realizado!");
+    form.submit();
   }
-} while (usuario === senha || usuario === null || senha === null);
+  
+  senhaInput.value = '';
+});
