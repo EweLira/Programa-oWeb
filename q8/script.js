@@ -1,12 +1,15 @@
-let soma = 0;
-let infoDiv = document.getElementById("info");
+function calcular() {
 
-for (let i = 1; i <= 5; i++) {
-  let numero = parseInt(prompt(`Digite o ${i}º número:`));
-  soma += numero;
+  let num1 = parseInt(document.getElementById("numero 1").value);
+  let num2 = parseInt(document.getElementById("numero 2").value);
+  let num3 = parseInt(document.getElementById("numero 3").value);
+  let num4 = parseInt(document.getElementById("numero 4").value);
+  let num5 = parseInt(document.getElementById("numero 5").value);
+
+  let soma = num1 + num2 + num3 + num4 + num5;
+
+  let media = soma / 5;
+
+  let resultado = document.getElementById("resultado");
+  resultado.textContent = "Soma: " + soma + " | Média: " + media;
 }
-
-let media = soma / 5;
-
-infoDiv.innerHTML += "<p>A soma dos números é: " + soma + "</p>";
-infoDiv.innerHTML += "<p>e a média é: " + media + "</p>";

@@ -1,11 +1,15 @@
-let numeros = '';
-let infoDiv = document.getElementById("info");
-
-for (let i = 1; i <= 20; i++) {
-  infoDiv.innerHTML += "<p>Contagem: " + i + "</p>";
+function vertical() {
+  let output = '';
+  for (let i = 1; i <= 20; i++) {
+    output += i + '<br>';
+  }
+  document.getElementById('numeros').innerHTML = output;
 }
 
-for (let i = 1; i <= 20; i++) {
-  numeros += i + ' ';
+function horizontal() {
+  let output = '';
+  for (let i = 1; i <= 20; i++) {
+    output += i + ' ';
+  }
+  document.getElementById('numeros').innerHTML = output;
 }
-infoDiv.innerHTML += "<p>Contagem lado a lado: " + numeros + "</p>";

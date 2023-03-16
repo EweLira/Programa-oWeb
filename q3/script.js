@@ -3,7 +3,7 @@ function validarDados() {
   const nome = document.getElementById("nome").value.trim();
   const idade = document.getElementById("idade").value;
   const salario = document.getElementById("salario").value;
-  const sexo = document.querySelector('input[name="sexo"]:checked');
+  const sexo = document.querySelector('input[name="sexo"]:checked').value;
   const estadoCivil = document.getElementById("estado-civil").value;
   
   if (nome.length < 4) {

@@ -1,17 +1,16 @@
-let num1 = parseInt(prompt("Digite o primeiro número:"));
-let num2 = parseInt(prompt("Digite o segundo número:"));
-let infoDiv = document.getElementById("info");
-let numeros = "";
+function gerarNumeros() {
+  var num1 = parseInt(document.getElementById("num1").value);
+  var num2 = parseInt(document.getElementById("num2").value);
+  
+  
+  var menor = num1 < num2 ? num1 : num2;
+  var maior = num1 > num2 ? num1 : num2;
+  
+  var numeros = "";
+  for (var i = menor; i <= maior; i++) {
+    numeros += i + " ";
+  }
+  
 
-if (num1 < num2) {
-  for (let i = num1 + 1; i < num2; i++) {
-    numeros += i + " ";
-  }
-} else if (num1 > num2) {
-  for (let i = num2 + 1; i < num1; i++) {
-    numeros += i + " ";
-  }
-} else {
-  alert("Os números são iguais!");
+  alert("Os números inteiros entre " + menor + " e " + maior + " são: " + numeros);
 }
-infoDiv.innerHTML += "<p>Números inteiros que estão no intervalo: " + numeros + "</p>";

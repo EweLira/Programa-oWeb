@@ -1,12 +1,17 @@
-let a = 80000;
-let b = 200000;
-let ano = 0;
-let infoDiv = document.getElementById("info");
+function calcularAnos() {
+  let popA = Number(document.getElementById("popA").value);
+  let taxaA = Number(document.getElementById("taxaA").value);
+  let popB = Number(document.getElementById("popB").value);
+  let taxaB = Number(document.getElementById("taxaB").value);
 
-while (a <= b){
-  a += a * 0.03;
-  b += b * 0.015;
-  ano += 1;
+  let anos = 0;
+  while (popA < popB) {
+    popA = popA * (1 + taxaA/100);
+    popB = popB * (1 + taxaB/100);
+    anos++;
+    
+  }
+  alert("Serão necessários " + anos + " anos para que a população do país A ultrapasse ou iguale a população do país B.");
+  
 }
-infoDiv.innerHTML += `A ultrapassa ou iguala a B em ${ano} anos.`;
 

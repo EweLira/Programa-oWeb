@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,11 +25,12 @@
         <input type="number" id="salario" name="salario"><br>
         <span id="error-salario" class="error"></span>
     
-        <label>Sexo:</label>
-        <input type="button" id="sexo-f" name="sexo" value="F"> 
-        <label for="sexo-f">Feminino</label> 
-        <input type="button" id="sexo-m" name="sexo" value="M">
-        <label for="sexo-m">Masculino</label><br>
+        <label for = "sexo">Sexo:</label>
+        <select id="sexo" name="sexo"> 
+          <option value ="">Selecione</option>
+          <option value ="f">Feminino</option>
+          <option value ="m">Masculino</option>
+        </select> 
         <span id="error-sexo" class="error"></span>
     
         <label>Estado civil:</label>
@@ -41,7 +42,7 @@
         </select><br>
         <span id="error-estado-civil" class="error"></span>
     
-        <input type="submit" value="Enviar">
+        <button type="submit">Entrar</button>
       </form>
     </div>
     <script src="script.js"></script>
